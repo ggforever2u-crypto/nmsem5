@@ -37,7 +37,7 @@ const generateFitnessInsights = async (totalWorkouts, averageDuration, totalCalo
 Please keep the insight extremely direct, actionable, and concise (within 2-3 sentences). Do not include any greeting, markdown bold stars (*), bullet points, or introductory phrases. Provide guidance on what to adjust or continue.`;
 
     const response = await ai.models.generateContent({
-      model: 'gemini-2.5-flash',
+      model: 'gemini-3.6',
       contents: prompt,
     });
 
