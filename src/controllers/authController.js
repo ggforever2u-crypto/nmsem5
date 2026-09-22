@@ -24,7 +24,7 @@ const registerUser = async (req, res, next) => {
     }
 
     // Check duplicate email
-    const userExists = await User.findOne({ email });
+    const userExists = await User.findOne({ email: email.toLowerCase() });
     if (userExists) {
       return res.status(400).json({
         success: false,
